@@ -1,0 +1,24 @@
+1. Create table 
+	-> create table stud(id int primary key,name text);
+
+	-> create table stud_detail(id int,city text,mobileno int,foreign key(id) references stud(id));
+
+2. Insert minimum 10 records for each table.
+	
+	->  insert into stud values (1,'om'),(2,'sai'),(3,'ram'),(4,'radha'),(5,'kishan'),(6,'shiv'),(7,'kevin'),(8,'kunal'),(9,'neel'),(10,'jay');
+	
+	->  insert into stud_detail
+	values(1,'bardoli',9865321474),(2,'surat',8565253515),(3,'bharuch',8565253515),(4,'surat',7545152535),(5,'bhuj',7565253515),(6,'surat',854652535),(7,'bardoli',65434	56789),(8,'surat',9565253154),(9,'mumbai',8565253515),(10,'surat',6323124578);
+
+3. Display whose student come from the Surat City.
+
+	-> select d.id,d.name from stud d ,stud_detail sd where d.id=sd.id and sd.city ='surat';
+
+4. Display student details whose city name start with 'B'.
+	
+	-> select d.id,d.name from stud d ,stud_detail sd where d.id=sd.id and sd.city like'b%';
+
+5. Update mobileno who are comming from 'Surat'
+
+	-> update stud_detail set mobileno='9905678654' where city='surat';	
+  
