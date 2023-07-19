@@ -12,7 +12,7 @@
 
 3. Display whose student come from the Surat City.
 
-	-> select d.id,d.name from stud d ,stud_detail sd where d.id=sd.id and sd.city ='surat';
+	-> select stud.name,stud_details.city from stud INNER JOIN stud_details ON stud.id=stud_details.id WHERE stud_details.city='surat';
 
 4. Display student details whose city name start with 'B'.
 	
